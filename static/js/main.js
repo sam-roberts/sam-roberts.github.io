@@ -11,7 +11,7 @@ $(function() {
     var audioReady = false;
 
     // The carefully, lovingly determined percentages which his holiness removes from the prices of his products.
-    var STEAM_SALES = [10, 25, 33, 50, 66, 75, 80, 90]
+    var STEAM_SALES = [10]
 
     // lolsorandom
     var randomChoice = function(list) {
@@ -28,7 +28,7 @@ $(function() {
         // When the image of his holiness loads, show it and animate it.
         var $saleBox = $('.sale-box');
         // How long in ms to wait until adding another sale box.
-        var interval = 200;
+        var interval = 1000;
         var numSales = 0;
 
         // Adds a sale box at a random x position.
@@ -42,7 +42,7 @@ $(function() {
             // Just copy the hidden box we had at page load time to make a new box.
             var newSale = $saleBox.clone().show();
 
-            newSale.text("-" + percentOff + "%"); // >js >strings
+            //newSale.text("-" + percentOff + "%"); // >js >strings
 
             newSale.css("left", xPos);
             $('body').append(newSale);
